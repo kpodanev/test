@@ -10,8 +10,8 @@ $y = trim(fgets(STDIN));
 echo "Введите радиус r: \n";
 $r = trim(fgets(STDIN));
 $dist = sqrt ($x * $x + $y * $y);
-if ($dist > $r) {
-	echo "Точка не принадлежит кругу";
+if ($dist >= $r) {
+	echo "Точка не принадлежит кругу или находится на окружности";
 } else {
 	echo "Точка принадлежит кругу";
 }
