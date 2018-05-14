@@ -5,12 +5,8 @@
 
 echo "Введите год: \n";
 $year = trim(fgets(STDIN));
-if ($year % 4 == 0) {
-	if ($year % 100 == 0 & $year % 400 <> 0) {
-		echo "В этом году 365 дней";
-	} else {
-		echo "В этом году 366 дней";
-	}
-} else {
-		echo "В этом году 365 дней";
-}
+$answer = 365;
+if ($year % 4 == 0 && ($year % 100 == 0 & $year % 400 == 0)) {
+	$answer = 366;	
+	} 
+echo "В этом году $answer дней";
